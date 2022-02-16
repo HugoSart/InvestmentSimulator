@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="539.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="127.0" prefWidth="693.0" style="-fx-background-color: default-primary-color;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="61.0" prefHeight="22.0" prefWidth="155.0" text="Número de Compras" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="39.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="61.0" prefHeight="22.0" prefWidth="155.0" text="Número de Vendas" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbBuy" layoutX="169.0" layoutY="39.0" prefHeight="22.0" prefWidth="77.0" text="6" textFill="WHITE" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="39.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbSell" layoutX="169.0" layoutY="64.0" prefHeight="22.0" prefWidth="77.0" text="4" textFill="WHITE" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="91.0" prefHeight="22.0" prefWidth="155.0" text="Total de Transações" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="91.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbTotal" layoutX="169.0" layoutY="91.0" prefHeight="22.0" prefWidth="122.0" text="10" textFill="WHITE" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="91.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="246.0" layoutY="39.0" prefHeight="22.0" prefWidth="155.0" text="Compras positivas" textFill="WHITE" AnchorPane.leftAnchor="246.0" AnchorPane.topAnchor="39.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbPositive" layoutX="401.0" layoutY="39.0" prefHeight="22.0" prefWidth="77.0" text="6" textFill="WHITE" AnchorPane.leftAnchor="401.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="246.0" layoutY="64.0" prefHeight="22.0" prefWidth="155.0" text="Compras negativas" textFill="WHITE" AnchorPane.leftAnchor="246.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbNegative" layoutX="401.0" layoutY="64.0" prefHeight="22.0" prefWidth="77.0" text="4" textFill="WHITE" AnchorPane.leftAnchor="401.0" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="246.0" layoutY="91.0" prefHeight="22.0" prefWidth="155.0" text="Taxa de acerto" textFill="WHITE" AnchorPane.leftAnchor="246.0" AnchorPane.topAnchor="91.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbPercent" layoutX="401.0" layoutY="91.0" prefHeight="22.0" prefWidth="77.0" text="60%" textFill="WHITE" AnchorPane.leftAnchor="401.0" AnchorPane.topAnchor="91.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btZe" alignment="TOP_LEFT" disable="true" layoutX="610.0" layoutY="16.0" mnemonicParsing="false" onAction="#btZe_onAction" prefHeight="22.0" prefWidth="111.0" style="-fx-background-color: transparent;" text="Zé" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="31.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" onDragDetected="#btZe_onAction" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../icons/person_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btYuri" alignment="TOP_LEFT" layoutX="610.0" layoutY="56.0" mnemonicParsing="false" onAction="#btYuri_onAction" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: transparent;" text="Yuri " AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="56.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../icons/person_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btKanda" alignment="TOP_LEFT" layoutX="610.0" layoutY="83.0" mnemonicParsing="false" onAction="#btKanda_onAction" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: transparent;" text="Kanda" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="83.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../icons/person_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Line endX="100.0" layoutX="611.0" layoutY="75.0" rotate="90.0" scaleX="0.4" startX="-100.0" stroke="WHITE" AnchorPane.rightAnchor="21.5" AnchorPane.topAnchor="74.5" />
+            <Button fx:id="btOracle" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="615.0" layoutY="57.0" mnemonicParsing="false" onAction="#btOracle_onAction" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: transparent;" text="Oráculo" AnchorPane.rightAnchor="123.0" AnchorPane.topAnchor="57.0">
+               <font>
+                  <Font name="Agency FB" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../icons/person_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="menuBar" layoutY="1.0" prefHeight="27.0" prefWidth="876.0" style="-fx-background-color: rgba(0,0,0,0.2);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="26.0" prefWidth="111.0" text="Transações" textFill="WHITE">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Agency FB" size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btExit" mnemonicParsing="false" styleClass="image-button-close">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/close_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="14.0" layoutY="226.0" prefHeight="297.0" prefWidth="274.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="226.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50000.0" prefWidth="266.0">
+               <children>
+                  <Label fx:id="lbBuyList" alignment="TOP_LEFT" prefHeight="560.0" prefWidth="63.0" text="Compra" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Agency FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbDateList" alignment="TOP_LEFT" layoutX="63.0" prefHeight="558.0" prefWidth="63.0" text="23/11/16" AnchorPane.leftAnchor="63.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Agency FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbNameList" alignment="TOP_LEFT" layoutX="126.0" prefHeight="555.0" prefWidth="63.0" text="BBS3" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Agency FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbQntList" alignment="TOP_LEFT" layoutX="189.0" prefHeight="552.0" prefWidth="34.0" text="5" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Agency FB" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="14.0" layoutY="141.0" prefHeight="29.0" prefWidth="274.0" text="Histórico de Transações" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="141.0">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="190.0" prefHeight="29.0" prefWidth="63.0" text="Data" AnchorPane.leftAnchor="77.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="142.0" layoutY="190.0" prefHeight="29.0" prefWidth="63.0" text="Ação" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="190.0" prefHeight="29.0" prefWidth="63.0" text="Tipo" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="190.0" prefHeight="29.0" prefWidth="77.0" text="Quantidade" AnchorPane.leftAnchor="205.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font name="Agency FB" size="18.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="bcTransactions" layoutX="291.0" layoutY="141.0" prefHeight="390.0" prefWidth="543.0" title="Compras e Vendas" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="291.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="141.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

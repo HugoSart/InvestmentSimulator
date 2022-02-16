@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="org.easybatch:easybatch-opencsv:5.2.0" type="repository">
+    <properties maven-id="org.easybatch:easybatch-opencsv:5.2.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/easybatch-opencsv-5.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/easybatch-core-5.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/opencsv-4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-text-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/easybatch-opencsv-5.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/easybatch-core-5.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/opencsv-4.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.6-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-text-1.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

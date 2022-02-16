@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="FXScenario">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/FXScenario.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
